@@ -46,6 +46,8 @@ The mock data represents anomaly records for a digital service. Each record incl
   }
 ]
 
+```
+
 ### State Management with Zustand
 
 Since overengineer was encouraged, I decided to use Zustand for managing global state in the application. Zustand provides a straightforward and minimalistic approach to state management, allowing us to efficiently implement features like real-time notifications updates across the application without the complexity and boilerplate code often associated with other state management libraries.
@@ -58,3 +60,5 @@ I added simple tests that you can run it using `npm run test`
 
 In a real world scenario, I'd add more loading-messages/error messages when there are errors and responsivness :) 
 # mparticle-challenge
+
+Repo: https://github.com/gabyzif/mparticle-challenge
