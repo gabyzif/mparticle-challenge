@@ -1,40 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name
 
-## Getting Started
+## Project Setup
 
-First, run the development server:
+This is a Next.js application
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+`npm i`
+`npm run dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Backend Mock Setup
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This project includes a mock setup for handling anomaly records within a digital service monitoring platform, akin to the detailed configuration and monitoring capabilities found in enterprise-level services like AWS.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Mock Data
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The mock data represents anomaly records for a digital service. Each record includes an ID, organization ID, customer ID, a timestamp, the metric being recorded, its value, and a read status to track whether the anomaly has been reviewed.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```json
+[
+  {
+    "id": "1",
+    "orgId": "123",
+    "timestamp": "2022-01-01T09:00:00Z",
+    "customerId": "123456",
+    "metric": "pageViews",
+    "value": 100,
+    "read": false
+  },
+  {
+    "id": "2",
+    "orgId": "123",
+    "timestamp": "2022-01-01T10:00:00Z",
+    "customerId": "123456",
+    "metric": "errorRates",
+    "value": 5,
+    "read": false
+  },
+  {
+    "id": "3",
+    "orgId": "123",
+    "timestamp": "2022-01-01T11:00:00Z",
+    "customerId": "123456",
+    "metric": "responseTimes",
+    "value": 450,
+    "read": false
+  }
+]
 
-## Learn More
+### State Management with Zustand
 
-To learn more about Next.js, take a look at the following resources:
+Since overengineer was encouraged, I decided to use Zustand for managing global state in the application. Zustand provides a straightforward and minimalistic approach to state management, allowing us to efficiently implement features like real-time notifications updates across the application without the complexity and boilerplate code often associated with other state management libraries.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Testing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I added simple tests that you can run it using `npm run test`
 
-## Deploy on Vercel
+### Future
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In a real world scenario, I'd add more loading-messages/error messages when there are errors and responsivness :) 
+# mparticle-challenge
