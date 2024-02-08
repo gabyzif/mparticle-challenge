@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "orgId": "123",
+    "timestamp": "2022-01-01T09:00:00Z",
+    "customerId": "123456",
+    "metric": "pageViews",
+    "value": 100,
+    "read": false,
+    "severity": "info",
+    "title": "Page views are high",
+    "description": "Page views are high, but this is not a problem"
+  },
+  {
+    "id": "2",
+    "orgId": "123",
+    "timestamp": "2022-01-01T10:00:00Z",
+    "customerId": "123456",
+    "metric": "errorRates",
+    "value": 5,
+    "read": false,
+    "severity": "critical",
+    "title": "Error rates are high",
+    "description": "Error **rates** are high, this is a **problem**"
+  },
+  {
+    "id": "3",
+    "orgId": "123",
+    "timestamp": "2022-01-01T11:00:00Z",
+    "customerId": "123456",
+    "metric": "responseTimes",
+    "value": 450,
+    "read": false,
+    "severity": "warning",
+    "title": "Response times are high",
+    "description": "Response times are _high_, this is a **problem**"
+  },
+  {
+    "id": "4",
+    "orgId": "123",
+    "timestamp": "2022-03-01T11:00:00Z",
+    "customerId": "123457",
+    "metric": "responseTimes",
+    "value": 450,
+    "read": true,
+    "severity": "warning",
+    "title": "Response times are high",
+    "description": "Response times are high, this is a problem"
+  }
+]
